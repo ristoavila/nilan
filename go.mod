@@ -1,4 +1,4 @@
-module github.com/pjuzeliunas/nilan
+module github.com/ristoavila/nilan
 
 go 1.17
 
