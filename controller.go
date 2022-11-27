@@ -427,6 +427,7 @@ func (c *Controller) FetchErrors() (*Errors, error) {
 
 func (c *Controller) FetchSettings() (*Settings, error) {
 	registers := []Register{
+		ControlRunSet,
 		ControlModeSet,
 		ControlVentSet,
 		ControlTempSet,
@@ -439,6 +440,7 @@ func (c *Controller) FetchSettings() (*Settings, error) {
 	}
 
 	settings := &Settings{
+		ControlRunSet:        int(readings[ControlRunSet]),
 		ModeSet:              ModeSet(readings[ControlModeSet]),
 		FanSpeed:             FanSpeed(readings[ControlVentSet]),
 		RequestedTemperature: int16(readings[ControlTempSet]),

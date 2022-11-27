@@ -27,6 +27,8 @@ const (
 
 // Settings of Nilan system
 type Settings struct {
+	//main state on/off
+	ControlRunSet int
 	// Mode set Off, Heat, Cool, Auto, Service
 	ModeSet ModeSet
 	// FanSpeed of ventilation (VentSet 0 - 5)
