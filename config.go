@@ -5,13 +5,13 @@ import "os"
 // Config holds network settings of Nilan heatpump.
 type Config struct {
 	// NilanAdress is IP address and port of Nilan heatpump. Factory
-	// default address is "192.168.0.42:502".
+	// default address is "/dev/ttyUSB1".
 	NilanAddress string
 }
 
 // StandardConfig returns factory-default adress of Nilan heatpump
 func StandardConfig() Config {
-	return Config{NilanAddress: "192.168.0.42:502"}
+	return Config{NilanAddress: "/dev/ttyUSB1"}
 }
 
 // CurrentConfig reads NILAN_ADDRESS environment variable and returns
